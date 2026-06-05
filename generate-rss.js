@@ -9,7 +9,7 @@ const BLOGS_DIR = path.join(__dirname, 'src', 'blogs');
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
 // RSS Config - easy for the user to customize!
-const SITE_URL = 'https://myblog.com'; 
+const SITE_URL = 'https://ibeenhi.com/hannya'; 
 const SITE_TITLE = 'OniBlog | Modern Tech & Minimalist Design';
 const SITE_DESCRIPTION = 'Explore insights on modern web development, minimalist UI/UX design, and AI-assisted programming. A high-performance, statically-generated digital workspace.';
 

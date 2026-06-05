@@ -167,7 +167,7 @@ function App() {
               </button>
               
               <a 
-                href="/rss.xml" 
+                href="rss.xml" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="theme-toggle" 
@@ -264,7 +264,7 @@ function App() {
             </button>
             
             <a 
-              href="/rss.xml" 
+              href="rss.xml" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="theme-toggle" 

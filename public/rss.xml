@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title><![CDATA[OniBlog | Modern Tech & Minimalist Design]]></title>
-    <link>https://myblog.com</link>
+    <link>https://ibeenhi.com/hannya</link>
     <description><![CDATA[Explore insights on modern web development, minimalist UI/UX design, and AI-assisted programming. A high-performance, statically-generated digital workspace.]]></description>
-    <lastBuildDate>Fri, 29 May 2026 17:35:10 GMT</lastBuildDate>
-    <atom:link href="https://myblog.com/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2026 23:26:16 GMT</lastBuildDate>
+    <atom:link href="https://ibeenhi.com/hannya/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title><![CDATA[Hello World! 🚀 Vibecoding, Local AI, and Spawning New Projects!]]></title>
-      <link>https://myblog.com/#/post/hello-world-vibecoding</link>
+      <link>https://ibeenhi.com/hannya/#/post/hello-world-vibecoding</link>
       <guid isPermaLink="false">hello-world-vibecoding</guid>
       <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Welcome to my digital playground! 🎮🛸 Let's talk about fullstack engineering, FPV drones, Nintendo Switch 2, and my massive plans to spawn local AI model projects! Get ready! 🔥]]></description>

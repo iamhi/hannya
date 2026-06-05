@@ -7,7 +7,8 @@
     "dev": "node generate-rss.js && vite",
     "build": "node generate-rss.js && tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",
