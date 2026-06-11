@@ -1,0 +1,23 @@
+# OniBlog
+
+OniBlog is a high-performance, statically-generated digital workspace and blog built with Vite, React, and Markdown. It focuses on modern web development, minimalist UI/UX design, and AI-assisted programming.
+
+## Overview
+- **Main Skills**: Java, ReactJS, Kubernetes, Docker, Node.js, Golang, Mobile Development.
+- **Hobbies**: FPV Drones, Nintendo Switch 2, PC & Retro Gaming.
+- **About/Profile Page**: Hosted on path `/kodama/`
+
+## Main Features
+- Dynamic search of all posts and tags.
+- Category tabs filtering.
+- Pastel Cozy Lavender / Periwinkle theme supporting both light and dark modes.
+
+## Primary Resources
+
+- [Homepage](/) - The main landing page listing posts, categories, and tags.
+- [About Page](/kodama/) - Detailed developer profile and background.
+- [RSS Feed](/rss.xml) - RSS syndication feed for the blog.
+
+## Blog Posts
+
+- [Hello World! 🚀 Vibecoding, Local AI, and Spawning New Projects!](/hello-world-vibecoding.txt) (Hybrid Written) - Welcome to my digital playground! 🎮🛸 Let's talk about fullstack engineering, FPV drones, Nintendo Switch 2, and my massive plans to spawn local AI model projects!

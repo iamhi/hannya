@@ -24,6 +24,14 @@
   
   --card-shadow: 0 4px 20px -8px hsla(var(--hue), 20%, 30%, 0.05);
   --transition-smooth: all 0.25s ease;
+
+  /* Authorship Badge Colors */
+  --ai-color: hsl(270, 70%, 55%);
+  --ai-bg: hsl(270, 70%, 96%);
+  --human-color: hsl(150, 70%, 38%);
+  --human-bg: hsl(150, 70%, 96%);
+  --hybrid-color: hsl(35, 80%, 48%);
+  --hybrid-bg: hsl(35, 80%, 96%);
 }
 
 /* Dark mode - Pastel slate */
@@ -43,6 +51,14 @@
   --text-muted: hsl(var(--hue), 6%, 50%);
   
   --card-shadow: 0 4px 24px -10px hsla(0, 0%, 0%, 0.3);
+
+  /* Authorship Badge Colors (Dark Mode) */
+  --ai-color: hsl(270, 80%, 75%);
+  --ai-bg: hsl(270, 35%, 16%);
+  --human-color: hsl(150, 80%, 70%);
+  --human-bg: hsl(150, 25%, 14%);
+  --hybrid-color: hsl(35, 90%, 70%);
+  --hybrid-bg: hsl(35, 30%, 15%);
 }
 
 /* Global Reset */
@@ -357,7 +373,7 @@ h1, h2, h3, h4 {
 .card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-size: 0.8rem;
 }
 
@@ -618,3 +634,37 @@ h1, h2, h3, h4 {
     font-size: 2rem;
   }
 }
+
+/* Authorship Badges */
+.authorship-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.authorship-badge.ai {
+  background: var(--ai-bg);
+  color: var(--ai-color);
+  border: 1px solid hsla(270, 70%, 50%, 0.12);
+}
+
+.authorship-badge.human {
+  background: var(--human-bg);
+  color: var(--human-color);
+  border: 1px solid hsla(150, 70%, 35%, 0.12);
+}
+
+.authorship-badge.hybrid {
+  background: var(--hybrid-bg);
+  color: var(--hybrid-color);
+  border: 1px solid hsla(35, 80%, 45%, 0.12);
+}
+

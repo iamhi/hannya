@@ -1,21 +1,8 @@
 // Simple frontmatter and markdown parser for our static blog.
 // Works entirely at build/run time with Vite's import.meta.glob.
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  category: string;
-  readTime: string;
-  coverImage: string;
-  author: string;
-  tags: string[];
-  content: string;
-}
-
 // Custom parser to extract metadata (YAML frontmatter) and content from markdown
-function parseMarkdown(filePath: string, rawContent: string): BlogPost {
+function parseMarkdown(filePath, rawContent) {
   // Extract slug from file path (e.g., "/src/blogs/future-of-web.md" -> "future-of-web")
   const slug = filePath.split('/').pop()?.replace('.md', '') || 'unknown';
 
@@ -40,7 +27,7 @@ function parseMarkdown(filePath: string, rawContent: string): BlogPost {
   const yamlBlock = match[1];
   const content = match[2].trim();
 
-  const metadata: Record<string, any> = {};
+  const metadata = {};
   yamlBlock.split('\n').forEach((line) => {
     const colonIndex = line.indexOf(':');
     if (colonIndex !== -1) {
@@ -77,17 +64,18 @@ function parseMarkdown(filePath: string, rawContent: string): BlogPost {
     coverImage: metadata.coverImage || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=60',
     author: metadata.author || 'Anonymous',
     tags: metadata.tags || [],
+    writingType: metadata.writingType || 'human-written',
     content,
   };
 }
 
 // Load all markdown files from src/blogs/ using Vite's glob import
-export function getAllPosts(): BlogPost[] {
+export function getAllPosts() {
   // Use import.meta.glob to load all markdown files in src/blogs/ statically
   const modules = import.meta.glob('/src/blogs/*.md', {
     query: '?raw',
     eager: true,
-  }) as Record<string, { default: string }>;
+  });
 
   const posts = Object.entries(modules).map(([filePath, module]) => {
     return parseMarkdown(filePath, module.default);
@@ -97,12 +85,12 @@ export function getAllPosts(): BlogPost[] {
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
+export function getPostBySlug(slug) {
   const posts = getAllPosts();
   return posts.find((post) => post.slug === slug);
 }
 
-export function getCategories(): string[] {
+export function getCategories() {
   const posts = getAllPosts();
   const categories = posts.map((post) => post.category);
   return ['All', ...new Set(categories)];
